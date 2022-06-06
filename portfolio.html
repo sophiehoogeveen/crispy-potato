@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophie's Coding Portfolio</title>
+    <link rel="icon" href="assets/flower.png">
+    <!--https://www.clipartkey.com/view/mwJhRJ_pixel-art-flower-easy/-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="background">
+        <div id="header">
+            <img src="assets/flower.png" style="height:30px;align-self:center;padding-left:2px;">
+            <p style="justify-self:start;align-self:center;">Sophie's Coding Portfolio!</p>
+            <img src="assets/close.png" id="close" onclick="window.close()">
+        </div>
+        <div id="tabs" style="align-self:center;">
+            <button id="default" class="tabs" onclick="displayInfo(event, 'home')"><u>H</u>ome</button>
+            <button class="tabs" onclick="displayInfo(event, 'about')"><u>A</u>bout Me</button>
+            <button class="tabs" onclick="displayInfo(event, 'projects')"><u>P</u>rojects</button>
+        </div>
+        <div style="grid-row:4/span 1" id="footer">Email me at sophieh@lindenschool.ca!</div>
+        <div id="home" class="content white">
+            <pre class="courier" style="grid-area:1/1/1/1;padding-top:50px;">
+ ad88888ba                             88           88
+d8"     "8b                            88           ""
+Y8,                                    88
+`Y8aaaaa,     ,adPPYba,   8b,dPPYba,   88,dPPYba,   88   ,adPPYba,
+  `"""""8b,  a8"     "8a  88P'    "8a  88P'    "8a  88  a8P_____88
+        `8b  8b       d8  88       d8  88       88  88  8PP"""""""
+Y8a     a8P  "8a,   ,a8"  88b,   ,a8"  88       88  88  "8b,   ,aa
+ "Y88888P"    `"YbbdP"'   88`YbbdP"'   88       88  88   `"Ybbd8"'
+                          88
+                          88
+            </pre>
+            <pre class="courier" style="grid-area:2/1/2/1">
+88        88
+88        88
+88        88
+88aaaaaaaa88   ,adPPYba,    ,adPPYba,    ,adPPYb,d8   ,adPPYba,  8b       d8   ,adPPYba,   ,adPPYba,  8b,dPPYba,
+88""""""""88  a8"     "8a  a8"     "8a  a8"    `Y88  a8P_____88  `8b     d8'  a8P_____88  a8P_____88  88P'   `"8a
+88        88  8b       d8  8b       d8  8b       88  8PP"""""""   `8b   d8'   8PP"""""""  8PP"""""""  88       88
+88        88  "8a,   ,a8"  "8a,   ,a8"  "8a,   ,d88  "8b,   ,aa    `8b,d8'    "8b,   ,aa  "8b,   ,aa  88       88
+88        88   `"YbbdP"'    `"YbbdP"'    `"YbbdP"Y8   `"Ybbd8"'      "8"       `"Ybbd8"'   `"Ybbd8"'  88       88
+                                         aa,    ,88
+                                          "Y8bbdP"
+                                          
+-----------------------------------------------------------------------------------------------------------------
+
+            </pre>
+            <p class="courier subtitle" style="grid-area:3/1/3/1">A coding portfolio </p>
+        </div>
+        <div id="about" class="content white">
+            <p class="courier"
+                style="grid-area:1/2/1/2;align-self:center;padding:50px 100px;width:800px;padding-left:0px;">
+                Hi! My name is Sophie Hoogeveen. I'm 16 years old, and I'm currently a grade eleven student at the
+                Linden School.
+                I was born in Changsha, the capital city of Hunan, China. At 13 months old, I was adopted!
+                Now, I live in Toronto, Canada with my mom, dad, and two older brothers. My friends and family would
+                describe me as friendly, inquistive and detail-oriented!
+                And they're right: I'm pretty awesome. I also like reading, and recently, I've started to learn
+                Mandarin!
+                <br><br>I made this portfolio as a culminating project for my computer science course (ICS3U).
+                In the course, I've learnt a lot about HTML, CSS, and Javascript, but there is still much more to learn!
+                We've also learnt a little bit of Python.
+                In particular, I really enjoy developing the user interface and visual elements of a website.
+                I'm excited to learn more about front end development!
+                Coding has been a great way to engage both the creative and logical sides of me. I look forward to my
+                future projects!
+            </p>
+            <div id="window">
+                <div id="caption">
+                    <img style="grid-column:1/1;width:25px;" src="assets/file.png">
+                    <p style="font-size:20px;margin:0px;padding:0px;grid-column:2/2;">C:\A_photo_of_me.jpg</p>
+                </div>
+                <div id="imgHolder">
+                    <img src="assets/image.jpg" id="photo">
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="content white">
+            <div id="music_night">
+                <img src="assets/music_night.png" class="app">
+                <p>Music night</p>
+            </div>
+            <div id="to_do">
+                <img src="assets/to_do.png" class="app">
+                <p>To-do list</p>
+            </div>
+            <div id="movie_app">
+                <img src="assets/movie_app.png" class="app">
+                <p>Movie search application</p>
+            </div>
+        </div>
+    </div>
+    <div id="overlay">
+    </div>
+    <script>
+        document.getElementById("default").click();
+        function displayInfo(event, section) {
+
+            var i, content, tabs;
+
+            content = document.getElementsByClassName("content");
+            for (i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+            }
+
+            tabs = document.getElementsByClassName("tabs");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].className = tabs[i].className.replace(" active", "");
+            }
+
+            document.getElementById(section).style.display = "grid";
+            event.currentTarget.className += " active";
+        }
+
+        music_night = document.getElementById("music_night")
+        music_night.addEventListener("click", function () {
+            window.open("../music_night/here_comes_the_sun.html");
+        })
+        to_do = document.getElementById("to_do")
+        to_do.addEventListener("click", function () {
+            window.open("../to_do_list.html")
+        })
+        movie_app = document.getElementById("movie_app")
+        movie_app.addEventListener("click", function () {
+            window.open("../movie_app.html")
+        })
+    </script>
+</body>
+
+</html>

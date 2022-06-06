@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>here comes the sun</title>
+    <link rel="icon" href="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/d9dc1110e57e244.png">
+    <style>
+        *{
+            -webkit-user-drag:none;
+            user-select:none;
+        }
+        img{
+            object-fit:none;
+            width:600px;
+            height:400px;
+            border-radius:20px;
+            cursor:pointer;
+            justify-self:center;
+            margin-left:40px;
+        }
+        h1{
+            font-family:'Arial Rounded MT Bold',Arial,sans-serif;
+            font-size:50px;
+            font-weight:900;
+            line-height:10px;
+            text-align:center;
+            color:#dd8737;
+        }
+        h4{
+            font-family:'Andale Mono',monospace;
+            font-size:15px;
+            text-align:center;
+            color:#714028;
+        }
+        #clickMsg{
+            margin-top:50%;
+            float:left;
+            justify-self:left;
+            text-align:left;
+        }
+        #arrowKeys{
+            float:left;
+            text-align:left;
+            justify-self:left;
+        }
+        #container{
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            width:1100px;
+        }
+        #imgText{
+            width:210px;
+            align-self:center;
+        }
+        #footer{
+            position:absolute;
+            text-align:left;
+            left:30px;
+            margin-top:70px;
+            font-size:12px;
+        }
+        #lyrics{
+            margin-top:-10%;
+            float:right;
+            align-self:flex-start;
+            text-align:left;
+            width:210px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1 style="margin-top:100px;" class="h1">here comes</h1>
+            <h1 class="h1">the sun</h1>
+            <h4>WORDS AND MUISC BY GEORGE HARRISON</h4>
+        </div>
+        <div id="imgText">
+            <h4 id="clickMsg">CLICK THE IMAGE TO START THE MUSIC. PRESS IT AGAIN TO STOP IT! ➜</h4> 
+            <h4 id="arrowKeys">USE THE ARROW KEYS ◄ ► TO CHANGE THE IMAGE AND TEXT COLOUR! 1 OF 7.</h4>
+        </div>
+        <img id="gif" src="https://64.media.tumblr.com/258ce733d2999ea516dc84542c604001/82d22c5843bd1662-cf/s1280x1920/5d3d07a3b209d7bc53dc65116ffdef8d540eaba9.gifv">   
+        <h4 style="margin-top:20px;">CODED BY SOPHIE HOOGEVEEN IN GRADE ELEVEN FOR ICS3U</h4>
+        <h4 id="footer">ARTWORK BY MINI-MOSS, ANASABIN, AND OZUMIKAN ON TUMBLR</h4>
+    </div>
+</body>
+<script>
+    var gif=document.getElementById("gif");
+    var play=false;
+    gif.addEventListener('click', function(){
+        console.log(play);
+        if(play===false){
+            playSong();
+            play=true;
+        }else if(play===true){
+            var id=window.setTimeout(function(){},0);
+            while(id--){
+                window.clearTimeout(id);
+            }
+            play=false;
+        }
+    })
+    function playSong(){
+        intro();
+        setTimeout(()=>{
+            chorus();
+        },13200)
+        setTimeout(()=>{
+            verse();
+        },28560)
+        setTimeout(()=>{
+            chorus2();
+        },43920)
+        setTimeout(()=>{
+            beforeRep();
+        },57360)
+        setTimeout(()=>{
+            rep1End1();
+        },59280)
+        setTimeout(()=>{
+            verse();
+        },61200)
+        setTimeout(()=>{
+            chorus2();
+        },76560)
+        setTimeout(()=>{
+            var id=window.setTimeout(function(){},0);
+            while(id--){
+                window.clearTimeout(id);
+            }
+            play=false;
+        },89760)
+    }
+    function intro(){
+        //right hand
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        },480)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },960)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        },1200)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },1680)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        },2400)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },2640)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },3120)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },3600)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },4080)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },4560)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },5040)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },5520)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+        },5760)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },6000)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+        },6240)
+        //a & f# chord ↓↓↓
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play();
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },6480)
+        //g# & b chord ↓↓↓
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play();
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },6960)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        },8160)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },8400)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },8640)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        },8880)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },9360)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        },10080)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },10320)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },10800)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },11280)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        },11760)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },12240)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },12720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+        },13200)
+        //left hand
+        function chord1(){
+            var aud=new Audio('./notes/A3.mp3');
+            aud.play()
+            var aud2=new Audio('./notes/E4.mp3');
+            aud2.play()
+        }
+        function chord2(){
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A3.mp3');
+            aud.play()
+        }
+        function chord3(){
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        }
+        chord1();
+        setTimeout(()=>{
+            chord2();
+        },3840)
+        setTimeout(()=>{
+            chord3()
+        },5760)
+        setTimeout(()=>{
+            chord1();
+        },7680)
+        setTimeout(()=>{
+            chord2();
+        },11520)
+        setTimeout(()=>{
+            chord3();
+        },13200)
+    }
+    function dadada(){
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        },480)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },960)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },1200)    
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        },1440)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },1680)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },1920)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D4.mp3');
+            aud.play()
+        },2160)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },2400)    
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },2640)  
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        },2880)  
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },3120)  
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },3360)  
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/D4.mp3');
+            aud.play()
+        },3600)  
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+        },3840)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },4080)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        },4320) 
+        //left hand
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A3.mp3');
+            aud.play()
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db3.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A3.mp3');
+            aud.play()
+        },1440)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B2.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A3.mp3');
+            aud.play()
+        },2160)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A3.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },2880)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E3.mp3');
+            aud.play()
+        },3600)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        },4080)       
+    }
+    function chorus(){
+        //right hand
+        function chord1(){
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        }
+        function chord2(){
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/D4.mp3');
+            aud.play()
+        }
+        function chord3(){
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Db4.mp3');
+            aud.play()
+        }
+        function chord4(){
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        }
+        setTimeout(()=>{
+            chord1();
+        },2400)
+        setTimeout(()=>{
+            chord2();
+        },2640)
+        setTimeout(()=>{
+            chord1();
+        },3120)
+        setTimeout(()=>{
+            chord3();
+        },3600)
+        setTimeout(()=>{
+            chord1();
+        },4320)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },4560)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },4800)
+        setTimeout(()=>{
+            chord1();
+        },5040)
+        setTimeout(()=>{
+            chord4();
+        },6240)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },6480)
+        setTimeout(()=>{
+            chord4();
+        },6960)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },7440)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B3.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },8160)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },8400)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },8640)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/B3.mp3');
+            aud.play()
+        },9120)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        },9840)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        },10320)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Db4.mp3');
+            aud.play()
+        },10800)
+        setTimeout(()=>{
+            dadada();
+        },10800)
+        //left hand
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },1920)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },2880)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },3840)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },4800)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        },5760)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        },6720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Eb3.mp3');
+            aud.play()
+        },7680)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        },8640)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db3.mp3');
+            aud.play()
+        },9600)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },10560)
+    }
+    function verse(){
+        function chord1(){
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play();
+        }
+        function chord2(){
+            var aud=new Audio('./notes/Db4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play();
+        }
+        function chord3(){
+            var aud=new Audio('./notes/D4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        }
+        function chord4(){
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        }
+        function lilDar(){
+            setTimeout(()=>{
+                chord1();
+            },480)
+            setTimeout(()=>{
+                chord2();
+            },720)
+            setTimeout(()=>{
+                var aud=new Audio('./notes/D4.mp3');
+                aud.play()
+                var aud=new Audio('./notes/B4.mp3');
+                aud.play()
+            },960)
+            setTimeout(()=>{
+                chord1();
+                var aud=new Audio('./notes/A4.mp3');
+                aud.play()
+            },1200)
+        }
+        function itsBeen(){
+            setTimeout(()=>{
+                var aud=new Audio('./notes/A4.mp3');
+                aud.play()
+                var aud=new Audio('./notes/Db5.mp3');
+                aud.play()
+            },960)
+            setTimeout(()=>{
+                var aud=new Audio('./notes/E4.mp3');
+                aud.play()
+                var aud=new Audio('./notes/B4.mp3');
+                aud.play()
+            },1440)
+            setTimeout(()=>{
+                var aud=new Audio('./notes/A4.mp3');
+                aud.play()
+                var aud=new Audio('./notes/Db4.mp3');
+                aud.play()
+            },1920)
+            setTimeout(()=>{
+                chord3();
+            },2400)
+        }
+        lilDar();
+        setTimeout(()=>{
+            itsBeen();
+        },1200)
+        setTimeout(()=>{
+            chord4();
+        },4080)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },4560)
+        setTimeout(()=>{
+            chord4();
+        },5040)
+        setTimeout(()=>{
+            chord3();
+        },5520)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab3.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        },6000)
+        setTimeout(()=>{
+            chord4();
+        },6720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+        },7200)
+        setTimeout(()=>{
+            lilDar();
+        },7680)
+        setTimeout(()=>{
+            itsBeen();
+        },8880)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+        },12000)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },12240)
+        setTimeout(()=>{
+            chord4();
+        },12720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+        },13200)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B3.mp3');
+            aud.play()
+            var aud=new Audio('./notes/D4.mp3');
+            aud.play()
+        },13920)
+        setTimeout(()=>{
+            chord4();
+        },14400)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },14880)
+        //left hand
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },960)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },1680)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },1920)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },2640)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },2880)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D2.mp3');
+            aud.play()
+        },3840)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D2.mp3');
+            aud.play()
+        },4560)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },5760)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },6480)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },6720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },7680)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },8400)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },8640)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },9360)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },9600)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },10320)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },10560)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D2.mp3');
+            aud.play()
+        },11520)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D2.mp3');
+            aud.play()
+        },12240)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D2.mp3');
+            aud.play()
+        },12480)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },13440)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },14160)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },14400)
+    }
+    function chorus2(){
+        function chord1(){
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        }
+        function chord2(){
+            var aud=new Audio('./notes/D4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        }
+        function chord3(){
+            var aud=new Audio('./notes/Db4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        }
+        function chord4(){
+            var aud=new Audio('./notes/Db5.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+        }
+        //right hand
+        setTimeout(()=>{
+            chord1();
+        },480)
+        setTimeout(()=>{
+            chord2();
+        },720)
+        setTimeout(()=>{
+            chord1();
+        },1200)
+        setTimeout(()=>{
+            chord3();
+        },1680)
+        setTimeout(()=>{
+            chord4();
+        },2400)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },2640)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },2880)
+        setTimeout(()=>{
+            chord4();
+        },3120) 
+        setTimeout(()=>{
+            chord1();
+        },4320)
+        setTimeout(()=>{
+            chord2();
+        },4560)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db4.mp3');
+            aud.play()
+        },4800)
+        setTimeout(()=>{
+            chord1();
+        },5040)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Eb4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },5520)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },6480)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Eb4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()  
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },6720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },7200)
+        setTimeout(()=>{
+            chord1();
+        },7920)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },8400)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Db4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },8880)
+        setTimeout(()=>{
+            dadada();
+        },8880)
+        //left hand
+        var aud=new Audio('./notes/A2.mp3');
+        aud.play()
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },960)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },1920)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },2640)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },2880)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        },3840)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        },4560)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/D3.mp3');
+            aud.play()
+        },4800)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B2.mp3');
+            aud.play()
+        },5760)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B2.mp3');
+            aud.play()
+        },6480)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B2.mp3');
+            aud.play()
+        },6720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },7680)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },8400)
+
+    }
+    function beforeRep(){
+        //right hand
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Dd5.mp3');
+            aud.play()
+        },480)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },960)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Dd5.mp3');
+            aud.play()
+        },1200)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },1680)
+        //left hand
+        var aud=new Audio('./notes/A2.mp3');
+        aud.play()
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/A2.mp3');
+            aud.play()
+        },960)
+    }
+    function rep1End1(){
+        //right hand
+            var aud=new Audio('./notes/E4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+        },240)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+        },480)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Gb4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/A4.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/Ab4.mp3');
+            aud.play()
+            var aud=new Audio('./notes/B4.mp3');
+            aud.play()
+        },1200)
+        //left hand
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },720)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },960)
+        setTimeout(()=>{
+            var aud=new Audio('./notes/E2.mp3');
+            aud.play()
+        },1680)
+    }
+    var imgNum=0;
+    document.addEventListener('keydown', function(e){
+        e.preventDefault();
+        if(e.repeat){return}
+        switch(e.keyCode){
+            case 37:
+                if(imgNum==0){
+                    imgNum=7
+                }
+                imgNum=(imgNum)-1;
+                break;
+            case 39:
+                if(imgNum==6){
+                    imgNum=-1;
+                }
+                imgNum=(imgNum)+1;
+                break;
+        }
+        var headers=document.querySelectorAll("h1")
+        var subtitles=document.querySelectorAll("h4")
+        if(imgNum==0){
+            gif.src="https://64.media.tumblr.com/258ce733d2999ea516dc84542c604001/82d22c5843bd1662-cf/s1280x1920/5d3d07a3b209d7bc53dc65116ffdef8d540eaba9.gifv"
+            headers.forEach(h1=>{
+                h1.style.color="#dd8737"
+            })
+            subtitles.forEach(h4=>{
+                h4.style.color="#714028"
+            })
+        }
+        if(imgNum==1){
+            gif.src="./gifs/gif1.gif"
+            headers.forEach(h1=>{
+                h1.style.color="#709476"
+            })
+            subtitles.forEach(h4=>{
+                h4.style.color="#203d3c"
+            })
+        }
+        if(imgNum==2){
+            gif.src="./gifs/gif2.gif"
+            headers.forEach(h1=>{
+                h1.style.color="#ac6c6c"
+            })
+            subtitles.forEach(h4=>{
+                h4.style.color="#283b33"
+            })
+        } 
+        if(imgNum==3){
+            gif.src="./gifs/gif3.gif"
+            headers.forEach(h1=>{
+                h1.style.color="#d0442b"
+            })
+            subtitles.forEach(h4=>{
+                h4.style.color="#5f3d43"
+            })
+        }
+        if(imgNum==4){
+            gif.src="./gifs/gif4.gif"
+            headers.forEach(h1=>{
+                h1.style.color="#474485"
+            })
+            subtitles.forEach(h4=>{
+                h4.style.color="#040435"
+            })
+        }
+        if(imgNum==5){
+            gif.src="./gifs/gif5.gif"
+            headers.forEach(h1=>{
+                h1.style.color="#a44c97"
+            })
+            subtitles.forEach(h4=>{
+                h4.style.color="#191728"
+            })
+        }
+        if(imgNum==6){
+            gif.src="./gifs/gif6.gif"
+            headers.forEach(h1=>{
+                h1.style.color="#4d97b8"
+            })
+            subtitles.forEach(h4=>{
+                h4.style.color="#142f38"
+            })
+        }
+        document.getElementById("arrowKeys").innerHTML="USE THE ARROW KEYS ◄ ► TO CHANGE THE IMAGE AND TEXT COLOUR! "+(imgNum+1)+" OF 7."
+    });
+</script>
+</html>
