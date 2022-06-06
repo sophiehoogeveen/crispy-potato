@@ -1,0 +1,272 @@
+@font-face {
+    font-family: pixel_font;
+    src: url(assets/W95FA/w95fa.woff);
+    /*https://fontsarena.com/w95fa-by-alina-sava/*/
+}
+
+@font-face {
+    font-family: pixel_font_2;
+    src: url(assets/FreePixel.woff);
+}
+
+* {
+    font-family: pixel_font;
+    cursor: url(assets/cursor.png), auto;
+}
+
+html {
+    height: 100%;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-image: -webkit-linear-gradient(#FBEB60, #EB6336);
+    background-color: #75485E;
+    overflow: hidden;
+}
+
+#header {
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-image: -webkit-linear-gradient(0deg, #407076, #75485E);
+    color: white;
+    align-self: center;
+    padding: 10px 3px;
+    font-size: 20px;
+    display: grid;
+    grid-template:
+        25px / 30px auto 40px;
+    column-gap: 8px;
+}
+
+#background {
+    position: absolute;
+    background-color: #c3c3c3;
+    left: 15px;
+    right: 15px;
+    top: 15px;
+    bottom: 15px;
+    padding: 10px;
+    border: outset;
+    display: grid;
+    grid-template-rows: 45px 45px auto 45px;
+    z-index: -2;
+}
+
+#footer {
+    border: inset;
+    align-self: center;
+    margin-bottom: 10px 0;
+    padding: 10px 8px;
+    font-size: 20px;
+}
+
+#close {
+    color: black;
+    background-color: #c3c3c3;
+    border-style: outset;
+    padding: 4px 4px;
+    margin: -5px 0;
+    text-align: center;
+    align-self: center;
+    justify-self: end;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#close:hover {
+    border: inset;
+}
+
+.tabs {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.tabs:hover {
+    background-color: #407076;
+    color: white;
+}
+
+.active {
+    background-color: #407076;
+    color: white;
+}
+
+.white {
+    background-color: white;
+    border: inset;
+    display: grid;
+    overflow: auto;
+    justify-items: center;
+    align-items: start;
+    z-index: -1;
+    grid-area: 3/1/3/1;
+    margin-bottom: 10px;
+}
+
+#home {
+    grid-template-rows: 250px 300px 100px;
+    grid-template-columns: 1;
+    padding: 0px 50px;
+}
+
+#about {
+    grid-template-columns: 1fr / 2fr;
+}
+
+#projects {
+    padding: 10px;
+    padding-top: 30px;
+    grid-template: 200px / repeat(3, 100px);
+    justify-items: center;
+    text-align: center;
+}
+
+.app {
+    width: 50px;
+}
+
+.courier {
+    font-family: pixel_font_2, Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 3;
+    pointer-events: none;
+    background: none;
+}
+
+.courier div:hover {
+    color: white;
+}
+
+.subtitle::after {
+    content: "|";
+    font-size: 20px;
+    animation: cursor-blink 1s step-end infinite;
+    display: inline-block;
+}
+
+#window {
+    display: grid;
+    grid-template-rows: 45px / 1fr;
+    align-self: center;
+    background-color: #c3c3c3;
+    padding: 10px;
+    border: outset;
+    margin: 50px;
+}
+
+#caption {
+    grid-row: 1 / 1;
+    display: grid;
+    grid-template-columns: 30px auto;
+    background-image: -webkit-linear-gradient(0deg, #407076, #75485E);
+    color: white;
+    padding: 8px 3px;
+    margin-bottom: 2px;
+    align-items: center;
+}
+
+#imgHolder {
+    grid-row: 2 / 2;
+    border: inset;
+    height: 400px;
+    width: 350px;
+    align-self: center;
+    display: grid;
+    overflow: auto;
+    background-color: white;
+}
+
+#photo {
+    width: auto;
+    height: 500px;
+    justify-self: center;
+}
+
+@keyframes cursor-blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+::-webkit-scrollbar {
+    z-index: -1;
+    background-image: url(assets/scrolltrack.png);
+    background-size: 10px;
+    width: 36px;
+    height: 36px;
+    border: none;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    background-color: #c3c3c3;
+    border: outset;
+    width: 36px;
+    height: 36px;
+}
+
+::-webkit-scrollbar-button:start:increment,
+::-webkit-scrollbar-button:end:decrement {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c3c3c3;
+    border: outset;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url(assets/up.png);
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    background-image: url(assets/down.png);
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+}
+
+::-webkit-scrollbar-button:horizontal:decrement {
+    background-image: url(assets/right.png);
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+}
+
+::-webkit-scrollbar-button:horizontal:increment {
+    background-image: url(assets/left.png);
+    background-repeat: no-repeat;
+    background-position: 50%, 50%;
+}
+
+::-webkit-scrollbar-button:increment:active,
+::-webkit-scrollbar-button:decrement:active {
+    border: 3px outset grey;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #c3c3c3;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0.02;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/004/681/613/original/full-white-stripes-background-as-a-classic-glitch-overlay-effect-the-old-tv-noise-static-texture-on-a-black-background-a-retro-texture-collection-free-photo.jpg");
+}
