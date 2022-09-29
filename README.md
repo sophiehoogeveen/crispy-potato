@@ -1,2 +1,2 @@
 # sophiehoogeveen.github.io
-A collection of projects from my ISC3U course.
+a collection of projects from my ISC3U course
